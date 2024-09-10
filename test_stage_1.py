@@ -175,9 +175,9 @@ if __name__ == "__main__":
         np.save('./test_X_expand.npy', test_X_expand.cpu().numpy())
 
         # record semantics
-        np.save('./Semantics/S3R/test_X.npy', test_X.cpu().numpy())
-        np.save('./Semantics/S3R/test_Y.npy', test_Y.cpu().numpy())
-        np.save('./Semantics/S3R/test_X_expand.npy', test_X_expand.cpu().numpy())
+        np.save('./semantic/S3R/test_X.npy', test_X.cpu().numpy())
+        np.save('./semantic/S3R/test_Y.npy', test_Y.cpu().numpy())
+        np.save('./semantic/S3R/test_X_expand.npy', test_X_expand.cpu().numpy())
 
 
 

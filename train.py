@@ -6,6 +6,7 @@ from tqdm import tqdm
 from contLoss import ContLoss
 import torch.optim as optim
 import numpy as np
+import os
 
 
 def metrics_stage_1(true_label, predict_label):
@@ -423,6 +424,10 @@ if __name__ == "__main__":
     num_unknown = 6
     semantic_dim = 128
     num_total = num_known + num_unknown
+    if not os.path.exists('./model/S3R/'):
+        os.makedirs('./model/S3R/')
+    if not os.path.exists('./semantic/S3R/'):
+        os.makedirs('./semantic/S3R/')    
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     Net = NET(in_channels=1, input_size=[int(512 * len_time), 512], semantic_dim=semantic_dim,
               num_class=num_known, device=device).to(device)

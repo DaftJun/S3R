@@ -1,1 +1,0 @@
-This project is for paper "Open Set Learning for RF-based Drone Recognition"， and code will be uploaded soon.

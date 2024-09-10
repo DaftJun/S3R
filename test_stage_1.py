@@ -72,7 +72,7 @@ if __name__ == "__main__":
     num_known = 18
     num_unknown = 6
     num_total = num_known + num_unknown
-    model_path = "./models/S3R/group_" + str(my_index) + \
+    model_path = "./model/S3R/group_" + str(my_index) + \
                  "_margin_" + str(margin) + \
                  "_dim_" + str(semantic_dim) + \
                  "_length_" + str(time_size) + \

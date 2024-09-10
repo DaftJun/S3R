@@ -334,7 +334,7 @@ def train(net, device, semantic_dims, lr, batch_size, margin, num_known_class, m
         lr_scheduler_center.step()
         # model learning end-----------------------
         loss_log.append([epoch, Loss_total.item(), Loss_center.item(), Loss_ce.item(), Loss_cluster.item()])
-        np.savetxt('./models/S3R/' + model_name + '_loss' + '.txt', loss_log)
+        np.savetxt('./model/S3R/' + model_name + '_loss' + '.txt', loss_log)
 
         if epoch % interval == 0 and epoch != 0:
             print("----------------------start evaluation----------------------")
@@ -406,11 +406,11 @@ def train(net, device, semantic_dims, lr, batch_size, margin, num_known_class, m
 
                 tkr, tur, kp, fkr = metrics_stage_1(test_Y_normalized, label_hat)
                 print("----------------------evaluation end----------------------")
-                torch.save(net.state_dict(), './models/S3R/' + model_name + '.pkl')
+                torch.save(net.state_dict(), './model/S3R/' + model_name + '.pkl')
                 print("current state epoch: {} | tkr: {} | tur: {} | kp: {}".format(epoch, tkr, tur, kp))
                 print("tur mistake:", tur_mistake)
                 indicator_log.append([epoch, np.round(tkr, 4), np.round(tur, 4), np.round(kp, 4), np.round(fkr, 4)])
-        np.savetxt('./models/S3R/' + model_name + '_indicator' + '.txt', indicator_log)
+        np.savetxt('./model/S3R/' + model_name + '_indicator' + '.txt', indicator_log)
 
 
 if __name__ == "__main__":

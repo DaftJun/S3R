@@ -1,5 +1,9 @@
 # Open Set Learning for RF-based Drone Recognition
 
+This paper is early access in IEEE Trans. Inf. Forensics Security, doi: 10.1109/TIFS.2024.3463535
+
+https://ieeexplore.ieee.org/document/10684814
+
 The dataset is available at:
 
 - IEEE Dataport: https://dx.doi.org/10.21227/wv7h-sv64

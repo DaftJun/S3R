@@ -1,8 +1,6 @@
 # Open Set Learning for RF-based Drone Recognition
 
-This paper is early access in IEEE Trans. Inf. Forensics Security, doi: 10.1109/TIFS.2024.3463535
-
-https://ieeexplore.ieee.org/document/10684814
+This repository is an official implementation of the paper [Open Set Learning for RF-Based Drone Recognition via Signal Semantics](https://ieeexplore.ieee.org/document/10684814) 
 
 The dataset is available at:
 
@@ -24,6 +22,19 @@ The division of the dataset is provided in the **experiment_groups** folder. The
 | 7                          | I-A                           |
 | 8                          | I-B                           |
 | 9                          | I-C                           |
+
+If you find S3R useful in your research, please consider citing:
+```bibtex
+@ARTICLE{10684814,
+  author={Yu, Ningning and Wu, Jiajun and Zhou, Chengwei and Shi, Zhiguo and Chen, Jiming},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={Open Set Learning for RF-Based Drone Recognition via Signal Semantics}, 
+  year={2024},
+  volume={19},
+  number={},
+  pages={9894-9909},
+  doi={10.1109/TIFS.2024.3463535}}
+```
 
 
 

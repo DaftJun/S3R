@@ -82,16 +82,12 @@ class MyDataset(Dataset):
     def __getitem__(self, index):
         path, label = self.data[index]
         x = np.load(path + '-a.npy')
-        y = np.load(path + '-b_gamma=' + str(self.gamma) + '.npy')
         # resize feature into size 512
         x = x[0:self.time, :]
         x = x[:, 0:self.size]
-        y = y[0:self.time, :]
-        y = y[:, 0:self.size]
-        x = torch.FloatTensor(x).unsqueeze(0)
-        y = torch.FloatTensor(y)
-        z = y.permute(1, 0)
-        return x, y, z, label
+        x = torch.FloatTensor(x)
+        z = x.permute(1, 0)
+        return x.unsqueeze(0), x, z, label
 
     def __len__(self):
         return len(self.data)
